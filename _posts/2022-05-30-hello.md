@@ -15,7 +15,7 @@ pin: true
 - 💬 You can get in touch with me by email at [contact@toosalgado.com](mailto:contact@toosalgado.com)
 
 ## 📖 Blog Posts
-In the overview below you will find the featured posts I created for the [Knowledge Base](https://docs.rackspace.com/support/how-to/) project at Rackspace™ as part of my internal projects. 
+In the overview below you will find the featured posts I created for the [Knowledge Base](https://docs.rackspace.com/support/how-to/) project at Rackspace™ as part of my internal job projects when I worked there. 
 <!-- BLOG_START -->
 - [MySQL Java Database connectivity communications exception](https://docs.rackspace.com/docs/mysql-java-database-connectivity-communications-exception) - (2021-03-03)
 - [What are inodes in Linux?](https://docs.rackspace.com/docs/what-are-inodes-in-linux) - (2021-03-19)
