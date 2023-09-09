@@ -21,7 +21,7 @@ timezone: America/Mexico_City
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Welcome! 🔰                          # the main title
+title: Welcome to my site! 🔰                          # the main title
 
 tagline: Miguel Salgado's notes.   # it will display as the sub-title
 
@@ -44,8 +44,8 @@ social:
   email: contact@toosalgado.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/toosalgado18      # change to your twitter homepage
     - https://github.com/toosalgado18      # change to your github homepage
+    - https://x.com/toosalgado18      # change to your twitter homepage
     # Uncomment below to add more social linkse
     # - https://www.facebook.com/username
     - https://www.linkedin.com/in/toosalgado #LinkedIn
@@ -73,7 +73,7 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: dark  # [light|dark]
+theme_mode:  # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
@@ -95,7 +95,7 @@ comments:
     shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo:         # <gh-username>/<repo>
+    repo: toosalgado18/toosalgado.com        # <gh-username>/<repo>
     issue_term:   # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
