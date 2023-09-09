@@ -1,6 +1,7 @@
 ---
 title: Helpful Linux Commands
 date: 2022-05-30 08:00:00 -600
+lastmod: 2023-09-09 -500
 permalink: linux-commands/
 ---
 ---
@@ -320,8 +321,6 @@ $ echo -e "Date:\t\t Load Avg 1,5,15:"; for file in /var/log/sa/sa[0123456789][0
 $ for file in /var/log/sa/sa[0123456789][0123456789]; do echo -e "---\n$(ls -la $file | awk '{print $7, $6}')"; sar -r -f "$file" | head -3 | tail -1 | sed 's/00\:00\:\0[012]/\t/'; sar -r -f "$file" | awk 'NR==1; END{print}' | grep Average; done
 ```
 
-
-
 ### How to check Load Average and then CPU for a specific time
 ```sh
 $ sar -q -s 14:00:00 -e 15:00:00
@@ -491,13 +490,13 @@ UU='USER'; useradd ${UU};echo "${UU}:VidfyzknK3hyEkML" | chpasswd; chage -l ${UU
 $ for USER in $(cut -d: -f1 /etc/passwd); do sudo -U $USER -l | tail -3; done | grep -v 'not allowed'
 ```
 
-### SFTP User Creation Script
+### SFTP User Creation Script 1
 ```sh
 chmod 711 /home/chroot/
 
-User='qrspace_sftp'; \
-ChrootDir='qrspace.com'; \
-TargetDir='/var/www/qrspace.com'; \
+User='USER'; \
+ChrootDir='DIR'; \
+TargetDir='/var/www/DIR'; \
 Tkt='220601-ord-0001373'; \
 useradd -d /home/chroot/${User} -s /sbin/nologin -G sftponly ${User}; \
 echo "${User}:dqKVCaheT3P9FAsx" | chpasswd; \
@@ -508,6 +507,42 @@ chmod 755 /home/chroot/${User}/${ChrootDir}; \
 chown ${User}:sftponly /home/chroot/${User}/${ChrootDir}; \
 echo -e "#Ticket:${Tkt}\n${TargetDir}\t /home/chroot/${User}/${ChrootDir}\t none\t bind\t 0 0" >> /etc/fstab; \
 mount /home/chroot/${User}/${ChrootDir};
+```
+
+### SFTP User Creation Script 2
+```bash
+# Define variables
+User='USER'
+ChrootDir='DIR'
+TargetDir='/var/www/DIR'
+Tkt='TICKET'
+
+# Check if the user already exists
+if id "${User}" &>/dev/null; then
+  echo "User '${User}' already exists. Exiting."
+  exit 1
+fi
+
+# Create the user with a secure password hash
+useradd -d "/home/chroot/${User}" -s /sbin/nologin -G sftponly "${User}"
+echo "${User}:$(openssl passwd -6 PASSWORD)" | chpasswd
+
+# Set permissions for the user's home directory
+chown root:root "/home/chroot/${User}"
+chmod 755 "/home/chroot/${User}"
+
+# Create the chroot directory and set permissions
+mkdir -p "/home/chroot/${User}/${ChrootDir}"
+chmod 755 "/home/chroot/${User}/${ChrootDir}"
+chown "${User}:sftponly" "/home/chroot/${User}/${ChrootDir}"
+
+# Add an entry to /etc/fstab and mount the directory
+echo -e "#Ticket:${Tkt}\n${TargetDir}\t/home/chroot/${User}/${ChrootDir}\t none\t bind\t 0 0" >> /etc/fstab
+if mount "/home/chroot/${User}/${ChrootDir}"; then
+  echo "Mounted successfully."
+else
+  echo "Mounting failed. Please check the configuration."
+fi
 ```
 
 ### SFTP Edit SSH config to allow users to only create files under 664 perms.
