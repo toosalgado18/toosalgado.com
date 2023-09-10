@@ -110,7 +110,7 @@ $ URL='WEBSITE'; curl -ILk -u USER http://${URL} --resolve example.com:80:127.0.
 $ URL='WEBSITE'; IP='IP' curl -ILk -u USER http://${URL} --resolve example.com:80:${IP}
 ```
 
-## MySQL Commands:
+## MySQL Commands
 
 ### Check Replication status
 ```sh
