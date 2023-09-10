@@ -64,12 +64,3 @@ $ journalctl --output=json
 $ journalctl --output=json-pretty
 $ journalctl --output=verbose
 ```
-
-
-
-
-
-
-```sh
-$ 
-```
