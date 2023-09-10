@@ -6,7 +6,7 @@ lastmod: 2023-09-10 -500
 ---
 ---
 
-# TOP
+## TOP
 `top` is a command-line utility in Linux that provides a dynamic view of system processes. It displays real-time information about the system's CPU usage, memory usage, and a list of running processes. It's a powerful tool for monitoring system performance and identifying resource-intensive processes. 
 
 ### Understanding the top interface:
@@ -52,7 +52,7 @@ The "batch mode" refers to a mode of operation where top runs non-interactively 
 $ top -b
 ```
 
-# PS
+## PS
 The `ps` (process status) command in Linux is used to display information about running processes. It provides a snapshot of the current processes running on your system. `ps` is a versatile command with various options and can be used for both basic and advanced process information retrieval. 
 
 ### Basic Usage
