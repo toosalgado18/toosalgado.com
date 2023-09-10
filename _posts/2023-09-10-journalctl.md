@@ -1,6 +1,6 @@
 ---
 title: Journal in Linux
-permalink: prefabs/
+permalink: journalctl/
 date: 2023-09-10 -500
 lastmod: 2023-09-10 -500
 ---
