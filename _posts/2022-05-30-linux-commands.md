@@ -7,7 +7,7 @@ permalink: linux-commands/
 ---
 This is a list of useful commands that have worked for me over the years for multiple servers while I was working at RXT..
 
-# Apache / NGINX Commands
+## Apache / NGINX Commands
 
 ### Modify apache to redirect from http to https
 In the 80 vhost block add the following lines:
@@ -110,7 +110,7 @@ $ URL='WEBSITE'; curl -ILk -u USER http://${URL} --resolve example.com:80:127.0.
 $ URL='WEBSITE'; IP='IP' curl -ILk -u USER http://${URL} --resolve example.com:80:${IP}
 ```
 
-# MySQL Commands:
+## MySQL Commands:
 
 ### Check Replication status
 ```sh
@@ -156,7 +156,7 @@ show variables like '%general_%';
 SELECT SLEEP(X);
 ```
 
-# PHP Commands
+## PHP Commands
 
 ### PHP INFO Script
 ```sh
@@ -198,7 +198,7 @@ $ plesk bin http2_pref enable
 $ curl -sI https://WEBSITE
 ```
 
-# OS Commands:
+## OS Commands:
 
 ### Check if Sophos is installed
 ```sh
@@ -704,7 +704,7 @@ $ lsblk /dev/sdX
 $ pvcreate /dev/sdX
 ```
 
-# Utilities
+## Utilities
 
 ### Run a command from a vim file
 ```vim
