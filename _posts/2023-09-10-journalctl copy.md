@@ -1,6 +1,6 @@
 ---
 title: Analyzing perfomance in Linux
-permalink: top/
+permalink: performance/
 date: 2023-09-10 -500
 lastmod: 2023-09-10 -500
 ---
