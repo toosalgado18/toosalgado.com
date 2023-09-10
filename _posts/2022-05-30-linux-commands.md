@@ -5,7 +5,7 @@ lastmod: 2023-09-09 -500
 permalink: linux-commands/
 ---
 ---
-This is a list of useful commands that have worked for me over the years for multiple servers.
+This is a list of useful commands that have worked for me over the years for multiple servers while I was working at RXT..
 
 # Apache / NGINX Commands
 
