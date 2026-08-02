@@ -1,39 +1,67 @@
-# Chirpy Starter
+# TooSalgado.com
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+[![Deploy](https://github.com/toosalgado18/toosalgado.com/actions/workflows/pages-deploy.yml/badge.svg)](https://github.com/toosalgado18/toosalgado.com/actions/workflows/pages-deploy.yml)
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+A personal technical knowledge base documenting real-world troubleshooting, Linux administration, Kubernetes, Nutanix, AWS, Docker, and home lab projects.
 
-## Why This Starter Exists
+🌐 **Website:** https://toosalgado.com
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+---
 
-To unlock all features, the following files must be present in your Jekyll site:
+## Topics
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+- Linux
+- Nutanix
+- Kubernetes
+- Docker
+- AWS
+- Home Lab
+- Automation
+- Performance Tuning
+
+---
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone git@github.com:toosalgado18/toosalgado.com.git
+cd toosalgado.com
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+Install dependencies:
 
-## Usage
+```bash
+bundle install
+```
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+Run the site:
 
-## Contributing
+```bash
+bundle exec jekyll serve
+```
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+Browse to:
+
+```
+http://127.0.0.1:4000
+```
+
+---
+
+## Built With
+
+- Jekyll
+- Chirpy Theme
+- GitHub Pages
+- GitHub Actions
+
+---
 
 ## License
 
-This work is published under [MIT][mit] License.
+The website content is licensed under the MIT License unless otherwise noted.
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+The site is powered by the excellent
+[Jekyll Theme Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy).
